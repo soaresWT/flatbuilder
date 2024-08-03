@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import autoAnimate from "@formkit/auto-animate";
 import {
   Theme,
@@ -36,7 +36,9 @@ function App() {
           setRandomApps(data.sort(() => 0.4 - Math.random()).slice(0, 4));
           await setupIndexAndAddDocuments(data);
         } else {
-          const response = await fetch("/api/api/v1/apps");
+          // const response = await fetch("/api/api/v1/apps");
+          const response = await fetch(`/api/proxy`);
+
           const data = await response.json();
           localStorage.setItem("apps", JSON.stringify(data));
           setApps(data);
