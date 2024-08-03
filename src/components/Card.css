@@ -1,0 +1,19 @@
+/* AppCard.css */
+.card-text {
+    height: 60px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Número de linhas a serem exibidas */
+    -webkit-box-orient: vertical;
+}
+
+.summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limitar a 2 linhas */
+    -webkit-box-orient: vertical;
+    height: 3em; /* Ajuste a altura conforme necessário */
+    line-height: 1.5em; /* Ajuste conforme o line-height do texto */
+}

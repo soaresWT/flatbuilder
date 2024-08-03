@@ -1,0 +1,58 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("src/assets/bgopt.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff; /* Ajuste conforme necessário */
+}
+/* App.css */
+
+.content-overlay {
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Camada escura com 50% de opacidade */
+    padding: 20px;
+    border-radius: 8px; /* Opcional: arredonda os cantos */
+}
+.radix-themes {
+    background-image: url("src/assets/bgopt.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Torna o NavBar fixo no topo da página */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o NavBar esteja acima de outros elementos */
+}
+
+/* Torna a Search fixa logo abaixo do NavBar */
+.search {
+    position: fixed;
+    top: 60px; /* Ajuste conforme a altura do NavBar */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Garante que a Search esteja acima de outros elementos, abaixo do NavBar */
+}
+
+/* Adiciona uma margem ao conteúdo principal para compensar a altura do NavBar e Search */
+.main-content {
+    margin-top: 120px; /* Ajuste conforme a altura combinada do NavBar e Search */
+}

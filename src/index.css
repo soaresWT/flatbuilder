@@ -1,0 +1,26 @@
+import '@radix-ui/themes/styles.css';
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.navbar-logo img {
+    height: 40px;
+    /* Ajuste o tamanho da logo conforme necessário */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
