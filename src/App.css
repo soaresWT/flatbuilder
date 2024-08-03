@@ -27,7 +27,7 @@ body {
     border-radius: 8px; /* Opcional: arredonda os cantos */
 }
 .radix-themes {
-    background-image: url("src/assets/bgopt.jpg");
+    background-image: url("/bgopt.jpg");
     position: relative;
     background-size: cover;
     background-position: center;
