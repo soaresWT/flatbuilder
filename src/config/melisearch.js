@@ -80,8 +80,6 @@ const getTaskStatus = async (taskUid) => {
   }
 };
 
-console.log(await getTaskStatus(1));
-
 // setupIndexAndAddDocuments(exampleData);
 
 export { addDocuments, search, setupIndexAndAddDocuments };

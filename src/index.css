@@ -1,5 +1,4 @@
-import '@radix-ui/themes/styles.css';
-
+import 'src/radix.css'' ;
 body,
 html {
     margin: 0;
@@ -7,8 +6,6 @@ html {
     width: 100%;
     box-sizing: border-box;
 }
-
-
 
 .navbar-logo img {
     height: 40px;
