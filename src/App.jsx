@@ -37,7 +37,7 @@ function App() {
           await setupIndexAndAddDocuments(data);
         } else {
           // const response = await fetch("/api/api/v1/apps");
-          const response = await fetch(`https://flathub.org/api/v1/apps`);
+          const response = await fetch(`/api/proxy`);
 
           const data = await response.json();
           localStorage.setItem("apps", JSON.stringify(data));
