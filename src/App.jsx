@@ -36,9 +36,7 @@ function App() {
           setRandomApps(data.sort(() => 0.4 - Math.random()).slice(0, 4));
           await setupIndexAndAddDocuments(data);
         } else {
-          // const response = await fetch("/api/api/v1/apps");
-          const response = await fetch(`/api/proxy`);
-
+          const response = await fetch("/api/api/v1/apps");
           const data = await response.json();
           localStorage.setItem("apps", JSON.stringify(data));
           setApps(data);
