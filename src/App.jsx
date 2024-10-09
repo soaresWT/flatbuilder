@@ -38,6 +38,7 @@ function App() {
         } else {
           const response = await fetch("/api/v1/apps");
           const data = await response.json();
+          console.log(data);
           localStorage.setItem("apps", JSON.stringify(data));
           setApps(data);
           setRandomApps(data.sort(() => 0.4 - Math.random()).slice(0, 4));

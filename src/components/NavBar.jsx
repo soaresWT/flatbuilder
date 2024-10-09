@@ -9,11 +9,11 @@ const NavBar = () => {
         alignItems: "center",
         color: "white",
         padding: "1rem",
-        width: "100%", // Usa 100% da largura da viewport
-        boxSizing: "border-box", // Inclui padding e border na largura
-        backgroundColor: "rgba(0, 0, 0, 0.5)", // Fundo semi-transparente para o blur ser visível
-        backdropFilter: "blur(10px)", // Efeito de desfoque
-        WebkitBackdropFilter: "blur(10px)", // Para suporte em navegadores WebKit
+        width: "100%",
+        boxSizing: "border-box",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
       }}
     >
       <div

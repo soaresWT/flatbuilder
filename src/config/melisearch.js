@@ -1,22 +1,19 @@
 import { MeiliSearch } from "meilisearch";
 
-const MEILISEARCH_URL = "http://localhost:7700"; // Substitua pela URL do seu MeiliSearch
-const indexName = "apps"; // Nome do índice
-const primaryKey = "inStoreSinceDate"; // Chave primária
+const MEILISEARCH_URL = "http://localhost:7700";
+const indexName = "apps";
+const primaryKey = "inStoreSinceDate";
 
 const client = new MeiliSearch({ host: MEILISEARCH_URL });
 
-// Função para criar o índice com a chave primária
 const createIndex = async () => {
   try {
     const index = client.index(indexName);
 
-    // Verifica se o índice já existe
     try {
       await index.getSettings();
       console.log("Index already exists");
     } catch {
-      // Se o índice não existe, cria-o
       await client.createIndex(indexName, { primaryKey });
       console.log("Index created with primary key:", primaryKey);
     }
@@ -25,7 +22,6 @@ const createIndex = async () => {
   }
 };
 
-// Função para adicionar documentos ao índice
 const addDocuments = async (documents) => {
   try {
     const index = client.index(indexName);
@@ -36,20 +32,18 @@ const addDocuments = async (documents) => {
   }
 };
 
-// Função para buscar documentos no índice
 const search = async (query) => {
   try {
     const index = client.index(indexName);
     const response = await index.search(query);
     console.log("Search results:", response.hits);
-    return response.hits; // Retorna os resultados da busca
+    return response.hits;
   } catch (error) {
     console.error("Error searching documents:", error);
     return [];
   }
 };
 
-// Função principal para configurar o índice e adicionar documentos
 const setupIndexAndAddDocuments = async (documents) => {
   console.log(documents);
   await createIndex();
@@ -79,7 +73,5 @@ const getTaskStatus = async (taskUid) => {
     console.error("Error fetching task status:", error);
   }
 };
-
-// setupIndexAndAddDocuments(exampleData);
 
 export { addDocuments, search, setupIndexAndAddDocuments };

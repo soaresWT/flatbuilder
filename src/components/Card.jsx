@@ -9,14 +9,14 @@ import {
   Strong,
   Skeleton,
 } from "@radix-ui/themes/dist/cjs/index.js";
-import { CopyIcon, PlusIcon, CheckIcon } from "@radix-ui/react-icons"; // Importar o ícone de confirmação
+import { CopyIcon, PlusIcon, CheckIcon } from "@radix-ui/react-icons";
 
 import "./Card.css";
 
 const AppCard = ({ app }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [installCommand, setInstallCommand] = useState("");
-  const [copyStatus, setCopyStatus] = useState("default"); // novo estado para o botão
+  const [copyStatus, setCopyStatus] = useState("default");
 
   useEffect(() => {
     if (app) {
@@ -32,7 +32,7 @@ const AppCard = ({ app }) => {
         setCopyStatus("copied");
         setTimeout(() => {
           setCopyStatus("default");
-        }, 2000); // Muda o texto e ícone por 2 segundos
+        }, 2000);
       })
       .catch((error) => console.error("Erro ao copiar o comando:", error));
   };

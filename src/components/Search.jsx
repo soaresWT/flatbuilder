@@ -9,7 +9,7 @@ const Search = ({ onSearch }) => {
   const handleChange = (event) => {
     const { value } = event.target;
     setQuery(value);
-    onSearch(value); // Chama a função de busca passada como prop
+    onSearch(value);
   };
 
   return (
